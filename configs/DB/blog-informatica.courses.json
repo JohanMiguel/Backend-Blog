@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "681e33bbfbf164d245e32f8a"
+  },
+  "name": "TECNOLOGIA",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T16:56:27.874Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T16:56:27.874Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681e33bbfbf164d245e32f8d"
+  },
+  "name": "TALLER",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T16:56:27.878Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T16:56:27.878Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681e33bbfbf164d245e32f90"
+  },
+  "name": "PRACTICA SUPERVISADA",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-09T16:56:27.882Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T16:56:27.882Z"
+  }
+}]

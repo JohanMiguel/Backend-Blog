@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "681e33bbfbf164d245e32f86"
+  },
+  "name": "Johan",
+  "surname": "Tojin",
+  "username": "admin_role",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$4APYxKgAw1X3blemAYHA1w$944gtvzft3wdovreg937X5xxUxWWOIsrkF571hkN/dQ",
+  "role": "ADMIN_ROLE",
+  "status": true
+}]
