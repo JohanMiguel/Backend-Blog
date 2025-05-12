@@ -42,53 +42,53 @@ export const getAllPosts = async (req, res) => {
 };
 
 export const getPostById = async (req, res) => {
-    try {
-        const { post_id } = req.params;
+  try {
+    const { post_id } = req.params;
 
-        const post = await Post.findById(post_id)
-            .populate("user", "name")
-            .populate("course", "name")
-            .populate({
-                path: "comments",
-                select: "nameUser content createdAt",
-            })
-            .lean();
+    const post = await Post.findById(post_id)
+      .populate("user", "name")
+      .populate("course", "name")
+      .populate({
+        path: "comments",
+        select: "nameUser content createdAt",
+        options: { sort: { createdAt: -1 } } // Comentarios del más reciente al más antiguo
+      })
+      .lean();
 
-        if (!post) {
-            return res.status(404).json({
-                success: false,
-                message: "Publicación no encontrada",
-            });
-        }
-
-        const sortedComments = post.comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
-        const formattedPost = {
-            id: post._id,
-            user: post.user?.name || "Usuario no encontrado",
-            title: post.title,
-            content: post.content,
-            course: post.course?.name || "Curso no encontrado",
-            createdAt: post.createdAt,
-            comments: sortedComments.map(comment => ({
-                nameUser: comment.nameUser,
-                content: comment.content,
-                createdAt: comment.createdAt,
-            })),
-        };
-
-        return res.status(200).json({
-            success: true,
-            post: formattedPost,
-        });
-    } catch (err) {
-        return res.status(500).json({
-            success: false,
-            message: "Error al obtener la publicación",
-            error: err.message,
-        });
+    if (!post) {
+      return res.status(404).json({
+        success: false,
+        message: "Publicación no encontrada",
+      });
     }
+
+    const formattedPost = {
+      id: post._id,
+      user: post.user?.name || "Usuario no encontrado",
+      title: post.title,
+      content: post.content,
+      course: post.course?.name || "Curso no encontrado",
+      createdAt: post.createdAt,
+      comments: post.comments.map(comment => ({
+        nameUser: comment.nameUser,
+        content: comment.content,
+        createdAt: comment.createdAt,
+      })),
+    };
+
+    return res.status(200).json({
+      success: true,
+      post: formattedPost,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      message: "Error al obtener la publicación",
+      error: err.message,
+    });
+  }
 };
+
 
 export const publicarPost = async (req, res) => {
     try {
