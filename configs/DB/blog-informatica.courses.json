@@ -1,39 +1,39 @@
 [{
   "_id": {
-    "$oid": "681e33bbfbf164d245e32f8a"
+    "$oid": "682be8eb6242ac3b6ca2342c"
   },
-  "name": "TECNOLOGIA",
+  "name": "practica supervisada",
   "status": true,
   "createdAt": {
-    "$date": "2025-05-09T16:56:27.874Z"
+    "$date": "2025-05-20T02:28:59.819Z"
   },
   "updatedAt": {
-    "$date": "2025-05-09T16:56:27.874Z"
+    "$date": "2025-05-20T02:28:59.819Z"
   }
 },
 {
   "_id": {
-    "$oid": "681e33bbfbf164d245e32f8d"
+    "$oid": "682be90f6242ac3b6ca2342f"
   },
-  "name": "TALLER",
+  "name": "tecnologia",
   "status": true,
   "createdAt": {
-    "$date": "2025-05-09T16:56:27.878Z"
+    "$date": "2025-05-20T02:29:35.394Z"
   },
   "updatedAt": {
-    "$date": "2025-05-09T16:56:27.878Z"
+    "$date": "2025-05-20T02:29:35.394Z"
   }
 },
 {
   "_id": {
-    "$oid": "681e33bbfbf164d245e32f90"
+    "$oid": "682be91b6242ac3b6ca23432"
   },
-  "name": "PRACTICA SUPERVISADA",
+  "name": "taller",
   "status": true,
   "createdAt": {
-    "$date": "2025-05-09T16:56:27.882Z"
+    "$date": "2025-05-20T02:29:47.564Z"
   },
   "updatedAt": {
-    "$date": "2025-05-09T16:56:27.882Z"
+    "$date": "2025-05-20T02:29:47.564Z"
   }
 }]

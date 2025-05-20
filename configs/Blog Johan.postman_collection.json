@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7b16e452-7d05-4510-aa75-896316843f1d",
+		"_postman_id": "5b607dfe-6ae6-44e0-866d-da973c9cb98c",
 		"name": "Blog Johan",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37634162"
@@ -49,10 +49,69 @@
 			"name": "Curso",
 			"item": [
 				{
+					"name": "Agregar-Course",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODJiOTUzODc2MWM2YTYzNzQyYTNlZjEiLCJpYXQiOjE3NDc2OTEwMzcsImV4cCI6MTc0NzY5NDYzN30.Och4FBJHbdUak7OBwLEFnfPaWavaKMYgncFywU7a_QI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/*\r\n{\r\n    \"name\": \"TALLER\"\r\n}\r\n{\r\n    \"name\": \"TECNOLOGIA\"\r\n}\r\n*/\r\n{\r\n    \"name\": \"PRACTICA SUPERVISADA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/blog/v1/course/courseImplement",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"blog",
+								"v1",
+								"course",
+								"courseImplement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Listar-Curso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TALLER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://127.0.0.1:3001/blog/v1/course/",
 							"protocol": "http",
@@ -122,7 +181,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFlMzNiYmZiZjE2NGQyNDVlMzJmODYiLCJpYXQiOjE3NDY4MDk4NDksImV4cCI6MTc0NjgxMzQ0OX0.UqygdDpHebyO2nxflIMyHm-eiFST-T15DaqaD-_fXUM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODJiYjMzODk2MjRlYTNlZDM1YmU5NjIiLCJpYXQiOjE3NDc2OTQ3OTYsImV4cCI6MTc0NzY5ODM5Nn0.pSCicUDoW1Ye1OXxRmBl3QKq__8hLVkNWTELIV2QTXk",
 									"type": "string"
 								}
 							]
@@ -131,7 +190,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n/*\r\n{\r\n  \"title\": \"Introducción a la Programación\",\r\n  \"courseName\": \"TALLER\",\r\n  \"content\": \"Este curso cubre los fundamentos de la programación.\"\r\n}\r\n {\r\n    \"title\": \"Introducción a React\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"React es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y se basa en componentes reutilizables.\"\r\n  }\r\n\r\n  {\r\n    \"title\": \"Fundamentos de HTML\",\r\n    \"courseName\": \"PRACTICA SUPERVISADA\",\r\n    \"content\": \"HTML es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido que se ve en el navegador\"\r\n  }\r\n\r\n  {\r\n    \"title\": \"Lógica de Programación\",\r\n    \"courseName\": \"TALLER\",\r\n    \"content\": \"La lógica de programación es fundamental para resolver problemas computacionales usando estructuras como condicionales, bucles y funciones.\"\r\n  }\r\n  {\r\n    \"title\": \"Introducción a Bases de Datos\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"Una base de datos es una colección organizada de datos. Se utilizan para almacenar, gestionar y recuperar información de manera eficiente.\"\r\n  }\r\n*/\r\n{\r\n    \"title\": \"Git y Control de Versiones\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"Git permite llevar el control de cambios en el código fuente y colaborar con otros desarrolladores mediante plataformas como GitHub.\"\r\n  }\r\n\r\n",
+							"raw": "\r\n/*\r\n\r\n {\r\n    \"title\": \"Introducción a React\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"React es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y se basa en componentes reutilizables.\"\r\n  }\r\n\r\n \r\n  {\r\n    \"title\": \"Lógica de Programación\",\r\n    \"courseName\": \"TALLER\",\r\n    \"content\": \"La lógica de programación es fundamental para resolver problemas computacionales usando estructuras como condicionales, bucles y funciones.\"\r\n  }\r\n\r\n\r\n\r\n  {\r\n    \"title\": \"Introducción a Bases de Datos\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"Una base de datos es una colección organizada de datos. Se utilizan para almacenar, gestionar y recuperar información de manera eficiente.\"\r\n  }\r\n\r\n     {\r\n    \"title\": \"Fundamentos de HTML\",\r\n    \"courseName\": \"TALLER\",\r\n    \"content\": \"HTML es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido que se ve en el navegador\"\r\n  }\r\n{\r\n    \"title\": \"Git y Control de Versiones\",\r\n    \"courseName\": \"TECNOLOGIA\",\r\n    \"content\": \"Git permite llevar el control de cambios en el código fuente y colaborar con otros desarrolladores mediante plataformas como GitHub.\"\r\n  }\r\n\r\n*/\r\n{\r\n  \"title\": \"Introducción a react\",\r\n  \"courseName\": \"PRACTICA SUPERVISADA\",\r\n  \"content\": \"la seman apsada iniciamos el tema de REACT.\"\r\n}\r\n\r\n\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -153,6 +212,42 @@
 								"v1",
 								"post",
 								"publicarPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Publicacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ZTEwNjAxMjYwZTE1M2Y5ZGJmN2UiLCJpYXQiOjE3NDAxOTUxMDksImV4cCI6MTc0MDE5ODcwOX0.pv-YYYwWLiGEJKFY6WbrypsiuocAK7elOOSdWnYRLAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/blog/v1/post/deletePost/67b94817ee6080a4b995f8b9",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"blog",
+								"v1",
+								"post",
+								"deletePost",
+								"67b94817ee6080a4b995f8b9"
 							]
 						}
 					},
@@ -191,7 +286,7 @@
 					"response": []
 				},
 				{
-					"name": "Buscar publicacion",
+					"name": "Ver-Publicacion",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -203,7 +298,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3001/blog/v1/post/buscar/681e34a1fbf164d245e32f9e",
+							"raw": "http://127.0.0.1:3001/blog/v1/post/buscar/682bb4d79624ea3ed35be97c",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -217,88 +312,7 @@
 								"v1",
 								"post",
 								"buscar",
-								"681e34a1fbf164d245e32f9e"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Editar-Publicacion",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODFkYmQyNWY3ODQ4MGJhODQ2ODJiMTMiLCJpYXQiOjE3NDY4MDU2MDIsImV4cCI6MTc0NjgwOTIwMn0.Og3L4x0vqWSk0AW58hqAoag3CxO-xmS1NTqMk-eCoDA",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"title\": \"Gestión de Flotas\",\r\n  \"course\": \"681dbd25f78480ba84682b17\",\r\n  \"content\": \"Diseño de una API para controlar el mantenimiento, ubicación y asignación de vehículos en empresas de transporte.\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://127.0.0.1:3001/blog/v1/post/updatePost/681dbd8af78480ba84682b24",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3001",
-							"path": [
-								"blog",
-								"v1",
-								"post",
-								"updatePost",
-								"681dbd8af78480ba84682b24"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Eliminar-Publicacion",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ZTEwNjAxMjYwZTE1M2Y5ZGJmN2UiLCJpYXQiOjE3NDAxOTUxMDksImV4cCI6MTc0MDE5ODcwOX0.pv-YYYwWLiGEJKFY6WbrypsiuocAK7elOOSdWnYRLAg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:3001/blog/v1/post/deletePost/67b94817ee6080a4b995f8b9",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3001",
-							"path": [
-								"blog",
-								"v1",
-								"post",
-								"deletePost",
-								"67b94817ee6080a4b995f8b9"
+								"682bb4d79624ea3ed35be97c"
 							]
 						}
 					},

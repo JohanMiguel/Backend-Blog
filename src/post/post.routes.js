@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { publicarPost, updatePost, deletePost, getAllPosts, getPostById, filterPosts } from "./post.controller.js";
-import { createPostValidator, updatePostValidator, deletePostValidator } from "../middlewares/post-validator.js";
+import { publicarPost, deletePost, getAllPosts, getPostById, filterPosts } from "./post.controller.js";
+import { createPostValidator, deletePostValidator } from "../middlewares/post-validator.js";
 
 const router = Router();
 
@@ -33,34 +33,6 @@ const router = Router();
  */
 router.post("/publicarPost", createPostValidator, publicarPost);
 
-/**
- * @swagger
- * /posts/updatePost/{post_id}:
- *   put:
- *     summary: Update a post
- *     tags: [Posts]
- *     parameters:
- *       - in: path
- *         name: post_id
- *         required: true
- *         schema:
- *           type: string
- *         description: Post ID
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/Post'
- *     responses:
- *       200:
- *         description: Post updated
- *       400:
- *         description: Invalid input
- *       500:
- *         description: Server error
- */
-router.put("/updatePost/:uid", updatePostValidator, updatePost);
 
 /**
  * @swagger

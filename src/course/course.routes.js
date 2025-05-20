@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getCourseByName, getCourses } from "./course.controller.js";
+import { getCourseByName, getCourses, createCourse } from "./course.controller.js";
 
 const router = Router();
 
@@ -39,5 +39,27 @@ router.get("/coursesfiltro/:name", getCourseByName);
  *         description: Server error
  */
 router.get("/", getCourses);
-
+/**
+ * @swagger
+ * /courseImplement:
+ *   post:
+ *     summary: Create a new course
+ *     tags: [Courses]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Course name
+ *     responses:
+ *       201:
+ *         description: Course created successfully
+ *       400:
+ *         description: Error creating course
+ */
+router.post("/courseImplement", createCourse);
 export default router;

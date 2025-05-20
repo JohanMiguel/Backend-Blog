@@ -2,26 +2,32 @@ import { hash } from "argon2";
 import User from "./user.model.js";
 
 
-export const initializeAdminUser = async () => {
+export const createUser = async (req, res) => {
     try {
-        const adminExists = await User.findOne({ role: "ADMIN_ROLE" });
+        const { name, surname, username, password, role, status } = req.body;
+        const hashedPassword = await hash(password);
 
-        if (!adminExists) {
-            const hashedPassword = await hash("Johan2006$sin");
+        const user = new User({
+            name,
+            surname,
+            username,
+            password: hashedPassword,
+            role,
+            status
+        });
 
-            const admin = new User({
-                name: "Johan",
-                surname: "Tojin",
-                username: "admin_role",
-                password: hashedPassword,
-                role: "ADMIN_ROLE",
-                status: true,
-            });
+        await user.save();
 
-            await admin.save();
-            console.log("✅ Usuario ADMIN_ROLE creado correctamente");
-        }
+        res.status(201).json({
+            ok: true,
+            msg: "Usuario creado correctamente",
+            user: user.toJSON()
+        });
     } catch (error) {
-        console.error("❌ Error al inicializar el usuario ADMIN_ROLE:", error);
+        res.status(400).json({
+            ok: false,
+            msg: "Error al crear el usuario",
+            error: error.message
+        });
     }
 };

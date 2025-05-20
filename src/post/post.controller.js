@@ -207,44 +207,6 @@ export const filterPosts = async (req, res) => {
     }
 };
 
-export const updatePost = async (req, res) => {
-    try {
-        const { post_id } = req.params;
-        const data = req.body;
-        const user = req.usuario;
-
-        if (!user) {
-            return res.status(404).json({
-                success: false,
-                message: 'Usuario no encontrado',
-            });
-        }
-
-        const post = await Post.findById(post_id);
-
-        if (!post || post.user.toString() !== user._id.toString()) {
-            return res.status(403).json({
-                success: false,
-                message: 'No tienes permiso para actualizar esta publicación',
-            });
-        }
-
-        const updatedPost = await Post.findByIdAndUpdate(post_id, data, { new: true });
-
-        res.status(200).json({
-            success: true,
-            message: 'Publicación actualizada',
-            updatedPost,
-        });
-    } catch (err) {
-        res.status(500).json({
-            success: false,
-            message: 'Error al actualizar la publicación',
-            error: err.message,
-        });
-    }
-};
-
 export const deletePost = async (req, res) => {
     try {
         const { post_id } = req.params;

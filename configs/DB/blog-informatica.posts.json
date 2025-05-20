@@ -1,157 +1,107 @@
 [{
   "_id": {
-    "$oid": "681e3417fbf164d245e32f97"
+    "$oid": "682bb4d79624ea3ed35be97c"
   },
   "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
+    "$oid": "682be87e6242ac3b6ca23425"
   },
-  "title": "Introducción a la Programación",
-  "content": "Este curso cubre los fundamentos de la programación.",
+  "title": "PMA DE BLOG INFORMATICO",
+  "content": "Esta actividad es sobre el PMA de Blog Informatico donde completamos correctamente el proyecto ",
   "course": {
-    "$oid": "681e33bbfbf164d245e32f8d"
+    "$oid": "682be91b6242ac3b6ca23432"
   },
   "comments": [
     {
-      "$oid": "682042f65ed76b0a003a9c63"
+      "$oid": "682bb4f09624ea3ed35be985"
     }
   ],
   "createdAt": {
-    "$date": "2025-05-09T16:57:59.343Z"
+    "$date": "2025-05-19T22:46:47.875Z"
   },
   "updatedAt": {
-    "$date": "2025-05-11T06:25:58.298Z"
+    "$date": "2025-05-19T22:47:12.401Z"
   }
 },
 {
   "_id": {
-    "$oid": "681e34a1fbf164d245e32f9e"
+    "$oid": "682bb68b38f3e9e0175c948f"
   },
   "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
+    "$oid": "682be87e6242ac3b6ca23425"
   },
-  "title": "Introducción a React",
-  "content": "React es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y se basa en componentes reutilizables.",
+  "title": "Prueva corta de semanas 1 a 6",
+  "content": "Actividad sobre una prueva que se evaluaron los temas vistos desde la semana 1 hasta la samana 6",
   "course": {
-    "$oid": "681e33bbfbf164d245e32f8a"
-  },
-  "comments": [
-    {
-      "$oid": "681e3665fbf164d245e32fbc"
-    },
-    {
-      "$oid": "681e36a9fbf164d245e32fc4"
-    },
-    {
-      "$oid": "681e36dafbf164d245e32fc8"
-    },
-    {
-      "$oid": "6820268e3216af1ec9d6014b"
-    },
-    {
-      "$oid": "6820382a34caa0f48ecfbcc2"
-    },
-    {
-      "$oid": "6820383834caa0f48ecfbcc6"
-    },
-    {
-      "$oid": "6820673bfdf5ab4090f83bb5"
-    },
-    {
-      "$oid": "68206745fdf5ab4090f83bb9"
-    }
-  ],
-  "createdAt": {
-    "$date": "2025-05-09T17:00:17.893Z"
-  },
-  "updatedAt": {
-    "$date": "2025-05-11T09:00:53.198Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "681e34cbfbf164d245e32fa4"
-  },
-  "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
-  },
-  "title": "Fundamentos de HTML",
-  "content": "HTML es el lenguaje de marcado estándar para crear páginas web. Define la estructura del contenido que se ve en el navegador",
-  "course": {
-    "$oid": "681e33bbfbf164d245e32f90"
-  },
-  "comments": [
-    {
-      "$oid": "682038f05ed76b0a003a9c3c"
-    }
-  ],
-  "createdAt": {
-    "$date": "2025-05-09T17:00:59.414Z"
-  },
-  "updatedAt": {
-    "$date": "2025-05-11T05:43:12.864Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "681e34e3fbf164d245e32fa8"
-  },
-  "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
-  },
-  "title": "Lógica de Programación",
-  "content": "La lógica de programación es fundamental para resolver problemas computacionales usando estructuras como condicionales, bucles y funciones.",
-  "course": {
-    "$oid": "681e33bbfbf164d245e32f8d"
+    "$oid": "682be91b6242ac3b6ca23432"
   },
   "comments": [],
   "createdAt": {
-    "$date": "2025-05-09T17:01:23.928Z"
+    "$date": "2025-05-19T22:54:03.673Z"
   },
   "updatedAt": {
-    "$date": "2025-05-09T17:01:23.928Z"
+    "$date": "2025-05-19T22:54:03.673Z"
   }
 },
 {
   "_id": {
-    "$oid": "681e3526fbf164d245e32fb2"
+    "$oid": "682bb6cc38f3e9e0175c9496"
   },
   "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
+    "$oid": "682be87e6242ac3b6ca23425"
   },
-  "title": "Introducción a Bases de Datos",
-  "content": "Una base de datos es una colección organizada de datos. Se utilizan para almacenar, gestionar y recuperar información de manera eficiente.",
+  "title": "Exposicion de Proyecto Social",
+  "content": "La semana pasada tubimos una exposicion donde presentamos nuestras propuestas para el 3er Bimestre Proyecto Social",
   "course": {
-    "$oid": "681e33bbfbf164d245e32f8a"
+    "$oid": "682be90f6242ac3b6ca2342f"
   },
   "comments": [
     {
-      "$oid": "682068bb804e97b3c078d045"
+      "$oid": "682bb73f38f3e9e0175c94d3"
+    },
+    {
+      "$oid": "682bb77338f3e9e0175c94d7"
+    },
+    {
+      "$oid": "682bef146242ac3b6ca2347d"
     }
   ],
   "createdAt": {
-    "$date": "2025-05-09T17:02:30.730Z"
+    "$date": "2025-05-19T22:55:08.104Z"
   },
   "updatedAt": {
-    "$date": "2025-05-11T09:07:07.191Z"
+    "$date": "2025-05-20T02:55:16.416Z"
   }
 },
 {
   "_id": {
-    "$oid": "681e3545fbf164d245e32fb6"
+    "$oid": "682be9436242ac3b6ca23439"
   },
   "user": {
-    "$oid": "681e33bbfbf164d245e32f86"
+    "$oid": "682be87e6242ac3b6ca23425"
   },
-  "title": "Git y Control de Versiones",
-  "content": "Git permite llevar el control de cambios en el código fuente y colaborar con otros desarrolladores mediante plataformas como GitHub.",
+  "title": "Introducción a react",
+  "content": "la semana pasada iniciamos el tema de REACT.",
   "course": {
-    "$oid": "681e33bbfbf164d245e32f8a"
+    "$oid": "682be8eb6242ac3b6ca2342c"
   },
-  "comments": [],
+  "comments": [
+    {
+      "$oid": "682bf917b906dba1b5fbb75c"
+    },
+    {
+      "$oid": "682bf927ef2ac13a916282ef"
+    },
+    {
+      "$oid": "682bf938ef2ac13a916282f3"
+    },
+    {
+      "$oid": "682bfdf1ef2ac13a9162839a"
+    }
+  ],
   "createdAt": {
-    "$date": "2025-05-09T17:03:01.867Z"
+    "$date": "2025-05-20T02:30:27.087Z"
   },
   "updatedAt": {
-    "$date": "2025-05-09T17:03:01.867Z"
+    "$date": "2025-05-20T03:58:41.869Z"
   }
 }]

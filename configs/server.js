@@ -9,8 +9,6 @@ import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
 import courseRoutes from "../src/course/course.routes.js"
 import postRoutes from "../src/post/post.routes.js"
-import { initializeAdminUser } from "../src/user/user.controller.js"
-import { defectCourse } from "../src/course/course.controller.js"; 
 import commentRoutes from "../src/comment/comment.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js";
@@ -51,8 +49,6 @@ const routes = (app) => {
 const conectarDB = async () => {
     try {
         await dbConnection()
-        await initializeAdminUser()
-        await defectCourse()
     } catch (err) {
         console.log(`Database connection failed: ${err}`)
         process.exit(1)
